@@ -10,13 +10,16 @@ public class Thing {
     private String ownerId;
 
     public Thing(String id, String name) {
-        this(id,name,new ArrayList<>(), "");
+        this(id,name,null, "");
     }
 
-    public Thing(String id, String name, List<String> tags, String ownerId) {
+    public Thing(String id, String name, String tag, String ownerId) {
         this.id = id;
         this.name = name;
-        this.tags = tags;
+        tags = new ArrayList<>();
+        if (tag != null) {
+            tags.add(tag);
+        }
         this.ownerId = ownerId;
     }
 

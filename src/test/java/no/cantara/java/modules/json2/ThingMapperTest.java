@@ -10,12 +10,12 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class ThingMapperTest {
     private static final Logger log = getLogger(ThingMapperTest.class);
 
-    private ThingMapper thingMapper;
+    private ThingMapperProxy thingMapper;
     private static final String expectedJson = "{\"id\":\"testId\",\"name\":\"test me\",\"tags\":[],\"ownerId\":\"\"}";
 
     @BeforeMethod
     public void setUp() throws Exception {
-        thingMapper = new ThingMapper();
+        thingMapper = new ThingMapperProxy();
     }
 
     @Test
